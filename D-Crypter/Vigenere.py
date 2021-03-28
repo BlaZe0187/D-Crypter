@@ -22,19 +22,13 @@ Ex: Ciphertext: Omaacdwgar
     Key: Hippo
     Keyword:HippoHippo'''
 Keyword = ''
-for i in range(0,len(Input)):
-    if len(Keyword)<=len(Input):
-        if len(Input)==len(Key):
-            n = len(Input)
-            Keyword += Key[0:n]
-        elif len(Input)-len(Key)<=len(Input)-len(Keyword):
-            n = len(Input)-len(Key)
-            Keyword += Key[0:n]
-        else:
-            n = len(Input)-len(Keyword)
-            Keyword += Key[0:n]
-    if len(Keyword)==len(Input):
-        break
+while len(Keyword)<len(Input):
+    if len(Input)-len(Keyword)<len(Key):
+        n = len(Input)-len(Keyword)
+        Keyword += Key[0:n]
+    else:
+        n = len(Input)-len(Key)
+        Keyword += Key[0:n+2]
 
 '''Deciphering the Ciphertext using the Keyword and TempLists'''
 AlphaList = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
