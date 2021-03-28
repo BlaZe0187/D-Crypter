@@ -23,7 +23,9 @@ usually grouped together to save space) which can also be increased depending on
 has.
 We can think of the Grid as a Graphical Plane and the Rows as X-axis & Columns as Y-axis and finally the Letters Inside
 the Grid as the point that are on the graph. Then we split the ciphertext into parts of 2 out of which first one is RowNum
-and second one is ColumnNum which will then Point/Lead to the deciphered letter.'''
+and second one is ColumnNum which will then Point/Lead to the deciphered letter.
+Ex: Ciphertext: 351332542114
+    Deciphered text: POLYBE'''
 Result = ''
 for i in range(0,len(Input),2):
     R,C = NumLi[i],NumLi[i+1]
