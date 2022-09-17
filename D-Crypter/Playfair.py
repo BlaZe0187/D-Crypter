@@ -22,7 +22,11 @@ while len(DecGrid)<5:
     end+=5
     DecGrid.append(Row)
 
+
 CipherText = str(input("Enter the ciphertext: "))
+OgLen = len(CipherText)
+if len(CipherText)/2!=0:
+    CipherText+='z'
 CipherText = CipherText.upper()
 CipherLi = []
 st = 0
@@ -45,3 +49,21 @@ for i in CipherLi:
     if len(Coord)!=0:
         CoordLi.append(Coord)
 
+DecText = ""
+for i in CoordLi:
+    if i[0][1]==i[1][1]:
+        DecText += f"{DecGrid[i[0][0]-1][i[0][1]]}{DecGrid[i[1][0]-1][i[1][1]]}"
+    elif i[0][0]==i[1][0]:
+        DecText += f"{DecGrid[i[0][0]][i[0][1]-1]}{DecGrid[i[1][0]][i[1][1]-1]}"
+    else:
+        DecText += f"{DecGrid[i[0][0]][i[1][1]]}{DecGrid[i[1][0]][i[0][1]]}"
+
+for i in DecText:
+    if i=='X' and DecText[DecText.index(i)-1]==DecText[DecText.index(i)+1]:
+        DecText = DecText.replace('X','',1)
+
+
+if OgLen/2!=0:
+    print(DecText[0:OgLen-1])
+else:
+    print(DecText)
