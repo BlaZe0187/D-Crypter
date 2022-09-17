@@ -1,11 +1,13 @@
-Input = [12,34,56,78,91]
-Key = [12,34,56]
-Keyword = []
-while len(Keyword)<len(Input):
-    if len(Input)-len(Keyword)<len(Key):
-        n = len(Input)-len(Keyword)
-        Keyword += Key[0:n]
-    else:
-        n = len(Input)-len(Key)
-        Keyword += Key[0:n+2]
-print(Keyword)
+key = str(input("Enter the key: "))
+key = key.upper()
+
+AlphaLi = ['A','B','C','D','E','F','G','H','I','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+
+KeyLi = []
+for i in key:
+    if i not in KeyLi:
+        KeyLi.append(i.upper())
+for i in range(0,25):
+    if AlphaLi[i] not in KeyLi:
+        KeyLi.append(AlphaLi[i])
+print(len(KeyLi))

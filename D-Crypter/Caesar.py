@@ -1,5 +1,5 @@
-#Caesar Cipher:Decrypts the given input by using shift of letters(even if the shift isn't known)
-#Keyed Caesar Cipher:First decrypts the given input on the basis of the key provided then shifts to decrypt and get the result
+'''Caesar Cipher:Decrypts the given input by using shift of letters(even if the shift isn't known)
+Keyed Caesar Cipher:First decrypts the given input on the basis of the key provided then shifts to decrypt and get the result'''
 
 Input = input("Enter:")
 
