@@ -12,5 +12,3 @@ The algorithms currently implemented are:
  - Playfair
  - Polybius
  - Vigenere
-
-Worked with 20+ to create social media automation bots which provided services like moderation, account automation, data collection etc. Worked with different social media APIs like Reddit, Discord, Telegram etc. Maintained a 5 star rating on the platform consistently. Also occasionally created bots capable of gathering and analyzing data related to multiple stock tickers from various subreddits.
